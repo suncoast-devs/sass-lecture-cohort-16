@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Faster+One&display=swap')
+
+$hot-pink: #ff48c4
+$electric-blue: #2bd1fc
+$lightning-yellow: #f3ea5f
+$shocking-violet: #c04df9
+$laser-red: #ff3f3f
+
+=cool-border
+  border: thick solid $shocking-violet
+  border-radius: 10px
+  box-shadow: -3px -3px 0 darken($electric-blue, 20%)
+
+html
+  height: 100%
+  font: 16px / 1 sans-serif
+
+body
+  margin: 1.2em
+  min-height: 100%
+  background-color: $electric-blue
+  color: darken($electric-blue, 40%)
+
+a
+  font-weight: 700
+  text-shadow: 1px 1px 0 darken($hot-pink, 30%)
+  display: inline-block
+  transition: all 100ms linear
+
+  &:link, &:visited
+    color: $hot-pink
+    text-decoration: none
+
+  &:focus, &:hover
+    color: $laser-red
+    transform: translate(-2px, -2px)
+    text-shadow: 3px 3px 0 darken($hot-pink, 30%)
+
+  &:active
+    color: $laser-red
+    text-decoration: underline
+
+header
+  text-align: center
+
+  h1
+    font-family: 'Faster One', cursive
+    color: $laser-red
+    text-shadow: 2px 2px 0 darken($lightning-yellow, 20%)
+    margin-bottom: 0
+    font-size: 2.4em
+    text-transform: uppercase
+
+  h2
+    margin-top: 0
+    font-style: italic
+    font-size: 1.2em
+
+section.movie
+  background-color: lighten($lightning-yellow, 20%)
+  margin: 1em auto
+  padding: 1em
+  +cool-border
+
+  h1
+    margin-bottom: 0
+
+    + p
+      margin-top: 0
+
+  p
+    font-weight: 100
+
+    &.read-more
+      text-align: right
+
+footer
+  padding: 2em
+  text-align: center
+  background-color: $hot-pink
+  color: $lightning-yellow
+  +cool-border
